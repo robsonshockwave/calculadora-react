@@ -72,7 +72,8 @@ function Calculadora() {
           </Col>
           <Col xs="9">
             <Form.Control type="text" name="txtNumeros" className="text-right" readOnly="readonly"
-            value={txtNumeros}/>
+            value={txtNumeros}
+            data-testid="txtNumeros"/>
           </Col>
         </Row>
 
@@ -87,7 +88,7 @@ function Calculadora() {
             <Button variant="light" onClick={() => adicionarNumero('9')}>9</Button>
           </Col>
           <Col>
-            <Button variant="warning"  onClick={() => definirOperacao('/')}>/</Button>
+            <Button variant="warning"  onClick={() => definirOperacao(divisao)}>/</Button>
           </Col>
         </Row>
 
@@ -102,7 +103,7 @@ function Calculadora() {
             <Button variant="light" onClick={() => adicionarNumero('6')}>6</Button>
           </Col>
           <Col>
-            <Button variant="warning" onClick={() => definirOperacao('*')}>*</Button>
+            <Button variant="warning" onClick={() => definirOperacao(multiplicacao)}>*</Button>
           </Col>
         </Row>
 
@@ -117,7 +118,7 @@ function Calculadora() {
             <Button variant="light" onClick={() => adicionarNumero('3')}>3</Button>
           </Col>
           <Col>
-            <Button variant="warning" onClick={() => definirOperacao('-')}>-</Button>
+            <Button variant="warning" onClick={() => definirOperacao(subtracao)}>-</Button>
           </Col>
         </Row>
 
@@ -132,7 +133,7 @@ function Calculadora() {
             <Button variant="success" onClick={acaoCalcular}>=</Button>
           </Col>
           <Col>
-            <Button variant="warning" onClick={() => definirOperacao('+')}>+</Button>
+            <Button variant="warning" onClick={() => definirOperacao(soma)}>+</Button>
           </Col>
         </Row>
       </Container>
